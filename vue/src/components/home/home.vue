@@ -3,7 +3,9 @@
       <Heard></Heard>
       <Logo></Logo>
       <List></List>
-      <div class="Broadcast">轮播</div>
+      <div class="Broadcast">
+        <Broadcast></Broadcast>
+      </div>
       <div class="outline">
         <div class="outline_news">
           <div class="con_1">
@@ -43,6 +45,7 @@
   import Logo from '../logo'
   import List from '../listnav'
   import Foot from '../foot.vue'
+  import Broadcast from './Broadcast.vue'
     export default {
         data() {
             return {
@@ -79,7 +82,7 @@
         }
       },
       components:{
-        Heard,Logo,List,Foot
+        Heard,Logo,List,Foot,Broadcast
       }
     }
 </script>
@@ -93,6 +96,7 @@
     height:400px;
     margin:0 auto;
     background: #c2ffec;
+    overflow: hidden;
   }
   /*概要*/
   .Box .outline{
