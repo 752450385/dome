@@ -1,19 +1,3 @@
-<!--<template>
-  <div class="bro">
-    &lt;!&ndash;图片&ndash;&gt;
-    <transition-group name="fade" tag="ul">
-      <li v-for="(item,index) in imgUrl" :key="index"  :class="['bro_li']"  v-show="index===showId">
-        <img :src=item.src>
-      </li>
-    </transition-group>
-    &lt;!&ndash;小圈&ndash;&gt;
-    <ul class="bro_lis">
-      <li v-for="(item,index) in imgUrl" :class="[index===showId?'active_li':'']" @click="showImg(index)">
-        {{item.id}}
-      </li>
-    </ul>
-  </div>
-</template>-->
 <template>
   <div class="slide">
     <div class="slideshow">
