@@ -2,7 +2,7 @@
 <template>
     <div class="product">
         <ul class="product_list">
-          <li v-for="item in updatePageCom">
+          <li v-for="item in updatePageCom" @clcik="">
             <router-link :to="{path:'/proDetails',query:{name:item}}">
               <img :src="item.src" alt="">
             </router-link>

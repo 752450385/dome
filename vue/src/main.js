@@ -9,7 +9,8 @@ import vuex from 'vuex'
 Vue.use(vuex);
 var store = new vuex.Store({//store对象
     state:{//state
-      show:false
+      cps:[]
+      //show:false
     },
     getters:{
       not_show(state){//这里的state对应着上面这个state
@@ -19,7 +20,20 @@ var store = new vuex.Store({//store对象
   //commit：同步操作，写法：this.$store.commit('mutations方法名',值)
     mutations:{
       switch_dialog(state,value){//这里的state对应着上面这个state
-        state.show = value;
+        var isCp=false;
+        for(var item in state.cps){
+          if(state.cps[item].id===value.id){
+            state.cps[item].index =value.index;
+            isCp = true;
+            //console.log(state.cps);
+
+          }
+        }
+        if(!isCp){
+            state.cps.push(value);
+            //console.log(state.cps);
+        }
+        //state.show = value;
         //你还可以在这里执行其他的操作改变state
       }
     },

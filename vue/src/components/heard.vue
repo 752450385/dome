@@ -4,6 +4,7 @@
       <div class="top">
         <ul>
           <li>请登录</li>
+          <li>购物车</li>
           <li>消息</li>
         </ul>
       </div>
@@ -34,6 +35,7 @@
     <div class="box">
       <ul>
         <li><a href="javascript:">登陆</a></li>
+       <li><router-link to="/shpC">购物车</router-link></li>
         <li><a href="javascript:">消息</a></li>
       </ul>
     </div>

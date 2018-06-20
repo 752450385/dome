@@ -14,6 +14,7 @@ import Fund from '@/components/news/child/fund'
 import Shares from '@/components/news/child/shares'
 import Phone from '@/components/news/child/phone'
 import Foreign from '@/components/news/child/foreign'
+import SpC from '@/components/shoppingCart.vue'
 
 Vue.use(Router);
 
@@ -82,6 +83,11 @@ export default new Router({
       path:'/product',
       name:'product',
       component:Product
+    },
+    {
+      path:'/shpC',
+      name:'shpC',
+      component:SpC
     },
     {
       path:'/details',

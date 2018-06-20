@@ -21,7 +21,7 @@
               <li v-for="item in nes">
                 <p class="nes_title">{{item.title}}</p>
                 <!--{path:'/news',query:{name:item.id}}  传递参数-->
-                <p class="new_center">{{item.center}} <router-link :to="{path:'/news',query:{name:item.id}}"  class="xq">[详情]</router-link></p>
+                <p class="new_center">{{item.center}} <router-link :to="{path:'/details',query:{name:item}}"  class="xq">[详情]</router-link></p>
               </li>
             </ul>
           </div>
@@ -78,7 +78,7 @@
           v-html="$options.filters.highlight(option.title)".
           v-htm 使用过滤（filters）；
           * */
-          return msg.center+'<router-link :to="{path:/test,,query: {name: msg.id}}">[详情]</router-link>';
+          return msg.center+'<router-link :to="{path:/details,,query: {name: msg.id}}">[详情]</router-link>';
         }
       },
       components:{

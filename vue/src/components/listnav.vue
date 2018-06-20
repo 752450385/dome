@@ -3,7 +3,7 @@
     <div class="list">
         <router-link class="rout" to="/" exact active-class="active">首页</router-link>
         <router-link class="rout" to="/news">要闻</router-link>
-        <router-link class="rout" to="/product">产品</router-link>
+        <router-link class="rout" to="/product" target="_blank">产品</router-link>
     </div>
 </template>
 <script type="text/ecmascript-6">

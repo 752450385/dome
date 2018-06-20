@@ -1,5 +1,5 @@
 <template>
-  <div class="slide">
+  <div class="slide"  @mouseover="mouseOver" @mouseout="mouseOut">
     <div class="slideshow">
       <transition-group tag="ul" :name="left?'image':'show'">
         <li v-for="(img, index) in imgArray" :key="index"   v-show="index===mark">
@@ -8,7 +8,7 @@
       </transition-group >
     </div>
     <div class="bar">
-      <span v-for="(item, index) in imgArray" :key="index" @click="change(index)">{{item.id}}</span>
+      <span v-for="(item, index) in imgArray" :key="index" @click="change(index)" :class="[index===mark?'active':'']">{{item.id}}</span>
     </div>
   </div>
 </template>
@@ -56,7 +56,7 @@
           }
         },
         play () {
-          setInterval(this.autoPlay, 2500)
+          this.invId=setInterval(this.autoPlay, 2500)
         },
         change (i) {
           if(i>this.mark){
@@ -66,6 +66,12 @@
             this.left=false
           }
           this.mark = i
+        },
+        mouseOver(){
+          clearInterval(this.invId);
+        },
+        mouseOut(){
+          this.invId=setInterval(this.autoPlay,2500);
         }
       },
       created () {

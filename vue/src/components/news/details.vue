@@ -3,7 +3,7 @@
     <div>
       <h3>{{dd.title}}</h3>
       <div v-html="dd.center" class="cen"></div>
-      <p></p>
+      <router-link to="/">返回首页</router-link>
     </div>
 </template>
 <script type="text/ecmascript-6">
